@@ -20,27 +20,29 @@
 <meta property=og:type content=website />
 <meta property=og:image content=""/>
 <link rel="shortcut icon" href="https://res.cloudinary.com/quest-group/image/upload/v1520198743/favicon.ico">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700' rel=stylesheet type='text/css'>
 <style>
-	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800');*{box-sizing:border-box;}
-	body{font-family:'Open Sans', sans-serif;font-weight:normal;margin:0;}
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800');*{box-sizing:border-box;}
+	body,input{font-family:'Open Sans', sans-serif;font-weight:normal;margin:0;}
 	a{text-decoration:none;}
 	h1, .h1, h2, .h2, h3, .h3{font-weight:bold;}
-	h1{font-weight:800}
 	p{margin:10px 0;}
 	.tudo{width:100%;}
 	.conteudo{width:100%;max-width:1140px;margin:0 auto;}
-	.capa{width:100%;height:100vh;background: linear-gradient(to bottom right, #00aced, #00a9a0);}
-	.slogan{text-align: center;font-size: 45px;color: white;max-width: 980px;margin: 0 auto;}
+	.capa,.gradiente{width:100%;height:100vh;}
+	.gradiente{background: linear-gradient(to bottom right, #00aced, #00a9a0);}
+	.slogan{text-align: center;font-size: 28px;max-width: 760px;margin: 0 auto;color: #2c2f58; font-weight: normal;}
+	.slogan span{font-weight: 800;display:block;font-size:40px;margin-bottom:5px;}
 	.logo{margin: 60px 0}
 	.btn{background:#1892cf;border-radius:5px;padding:7px 21px;color:white;}
 	.btn:hover{background:#0b224e;color:white;}
 	.capa .btn{margin:7.5vh 0 0 calc(25% - 73.43px);font-weight:bold;font-size:16px;}
 	.blocos{width:100%;height:100vh;}
 	.blocos .conteudo{padding:90px 0;}
-	.btn-chat{position:fixed;bottom:-5px;right:0;padding-right:20px;}
-	.btn-chat img{margin-right: -4px;}
+	.btn-chat{position:fixed;bottom: 0;right:0;background:#E8891C;padding:3px 10px 3px;font-weight:bold;}
+	.btn-chat .wapp{display:inline-block;float:left;width:32px;height:32px;background-color:#E8891C;padding:4px;}
 	.btn-chat-mob{display:none;position:fixed;bottom:0;width:200px;left:50%;margin-left:-100px;text-align:center;}
+	.atend{cursor:pointer;color:white;padding:4px 15px 6px 40px;float:left;background:url(img/atendimento.png);background-repeat:no-repeat;background-position:left 7px top 4px;}
+	#need{box-shadow: 0 2px 4px rgba(0,0,0,0.08), 0 2px 16px rgba(0,0,0,0.16);border:none;padding:15px 60px 15px 30px;font-size:16px;margin-top:40px;width:40%;background:url(img/busca.png);background-repeat:no-repeat;background-position:right 10px top 10px;}
 	@media screen and (max-width:768px){
 		.capa{background:#d1d9e4;}
 		.logo{margin: 30px 0 0 calc(50% - 82.5px);}
@@ -53,17 +55,20 @@
 </head>
 <body>
 	<div class=tudo>
-		<div class=capa>
+		<div class=capa style="background:url(img/bg_teste.png);background-repeat:repeat-x;background-position:center bottom;background-size:250px;background-color:#fffff6;">
 			<div class=conteudo style="text-align: center;">
-				<img class=logo src="img/logo_telemedic.png" width=130px />
+				<img class=logo src="img/logo_telemedic.png" width=105px />
 				<h1 class=slogan>
-					Você precisa de uma parceria, que te atenda em todas as suas necessidades.
+					<span>Telemedicina não é só laudo!</span> Você precisa de uma <strong style="font-weight:600;">empresa parceira</strong>, que te atenda em todas as suas necessidades? Conta pra gente:
 				</h1>
+				<input id=need type=text placeholder="Do que você precisa hoje?" />
 			</div>
 		</div>
-		<div class=btn-chat>
-			<a href="https://web.whatsapp.com/send?phone=5519987569789&text=Olá!%20Estou%20interessado%20nos%20serviços%20da%20Quest%20Group.%20Por%20favor%20entre%20em%20contato%20comigo." target=_blank><img src="img/atend_whatsapp_online.png" width=181 alt="Atendimento via WhatsApp" /></a>
-			<a href="https://questgroup.bitrix24.com.br/online/chat" target=_blank><img src="img/atend_chat.png" width=264 alt="Fale com nossos Especialistas" /></a>
+		<div class=gradiente>
+			<img src="img/knife.png" />
+		</div>
+		<div class=btn-chat style="display:none;">
+			<a class="atend" onClick="alert('oi');">Atendimento</a>
 		</div>
 		<div class=btn-chat-mob>
 			<a href="https://api.whatsapp.com/send?phone=5519987569789&text=Olá!%20Estou%20interessado%20nos%20serviços%20da%20Quest%20Group.%20Por%20favor%20entre%20em%20contato%20comigo." target=_blank><img src="https://res.cloudinary.com/quest-group/image/upload/v1520363446/atend_whatsapp.png" width=172 alt="Atendimento via WhatsApp" /></a>
